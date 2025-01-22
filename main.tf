@@ -48,7 +48,7 @@ resource "aws_docdb_cluster" "main" {
   db_cluster_parameter_group_name = aws_docdb_cluster_parameter_group.main.name
   tags                            = merge(local.tags, { Name = "${local.name_prefix}-cluster" })
   engine_version                  = var.engine_version
-  kms_key_id = var.kms_key_id
+
   storage_encrypted = true
 
 }
